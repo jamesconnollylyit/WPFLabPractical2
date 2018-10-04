@@ -5,8 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EinsteinUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Title="Albert Einstein Facts" MinHeight="450" Height="450" MinWidth="800" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Label 
+            Grid.Row="1" 
+            Grid.Column="1" 
+            Grid.ColumnSpan="2" 
+            Content="Five facts about Albert Einstein" 
+            HorizontalAlignment="Center"
+            FontSize="20" 
+            FontWeight="Bold" />
+
+        <Image 
+            Grid.Column="1" 
+            Grid.Row="2" 
+            Margin="10"
+            Source="Images/Einstein.jpg" />
+
+        <Button 
+            Grid.Column="2" 
+            Grid.Row="3" 
+            Width="150"
+            Height="25"
+            HorizontalAlignment="Right"
+            FontSize="16"
+            FontWeight="Bold"
+            Name="btnClose"
+            Click="btnClose_Click"
+            Content="Close" />
+
+
     </Grid>
 </Window>
